@@ -3,6 +3,7 @@
     <title> Portfolio </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://api.fontshare.com/v2/css?f[]=tabular@400,500,600,700&f[]=quicksand@300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet" />
   </head>
   <body class="container"> 
 <div class="wrapper">
@@ -144,5 +145,15 @@
     </div>
   </footer>
 </div>
+    <script>
+      const timeElement = document.querySelector("#currentTime");
+
+setInterval(() => {
+  const currentTime = `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`;
+  console.log(currentTime);
+  timeElement.textContent = currentTime;
+}, 1000);
+
+    </script>
   </body>
 </html>
