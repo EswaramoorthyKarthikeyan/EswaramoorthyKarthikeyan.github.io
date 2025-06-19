@@ -1,0 +1,47 @@
+.experience {
+	// Example styles, replace with actual styles from SCSS partials
+
+	.list {
+		display: flex;
+		flex-flow: column wrap;
+		gap: 32px;
+
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
+
+		.item {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+
+			.org {
+				font-weight: 600;
+			}
+
+			.role {
+				display: flex;
+				gap: 16px;
+				align-items: center;
+
+				.logo {
+					aspect-ratio: 1;
+					inline-size: 48px;
+					block-size: 24px;
+
+					img {
+						max-inline-size: 100%;
+						max-block-size: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+
+			.timeline {
+				font-size: 13px;
+				color: var(--color-light);
+			}
+		}
+	}
+}

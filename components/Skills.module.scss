@@ -1,0 +1,30 @@
+.skills {
+	margin-block-start: 8px;
+
+	.list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 24px;
+		align-items: center;
+
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
+
+		.item {
+			.wrapper {
+				display: inline-block;
+				inline-size: 32px;
+				block-size: 32px;
+
+				img {
+					aspect-ratio: 1;
+					max-inline-size: 100%;
+					max-block-size: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+}

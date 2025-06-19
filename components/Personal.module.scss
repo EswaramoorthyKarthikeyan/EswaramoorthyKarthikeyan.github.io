@@ -1,0 +1,17 @@
+.personal {
+	.designation {
+		font-size: 1.125rem;
+		font-weight: bold;
+		color: var(--color-light);
+		text-transform: uppercase;
+	}
+
+	.summary {
+		margin-block: 12px 0;
+
+		font-size: 0.8125rem;
+		font-weight: 400;
+		color: var(--color-light);
+		text-wrap: balance;
+	}
+}

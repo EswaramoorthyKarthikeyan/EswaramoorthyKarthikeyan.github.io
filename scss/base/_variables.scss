@@ -1,0 +1,19 @@
+@layer base {
+	:root {
+		--bg: #f9fafb;
+		--color: #22223b;
+		--color-light: #4a4e69;
+		--line-height: 1.5;
+		--font-size: 0.875rem;
+		--font-family: 'JetBrains', monospace;
+		--title-font-size: 1.5rem;
+		--title-margin-block-end: 1.5rem;
+		--title-font-family: 'JetBrains', monospace;
+	}
+
+	html[data-theme='dark'] {
+		--bg: #1f1f1f;
+		--color: #e3e3e3;
+		--color-light: #a4a4a4;
+	}
+}
