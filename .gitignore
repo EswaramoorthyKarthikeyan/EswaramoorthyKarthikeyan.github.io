@@ -3,10 +3,12 @@
 /.pnp
 .pnp.js
 
+
 # testing
 /coverage
 
 # production
+/dist
 /build
 
 # misc

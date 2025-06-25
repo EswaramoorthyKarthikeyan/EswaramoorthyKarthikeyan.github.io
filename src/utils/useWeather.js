@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 
 // Map weather description keywords to open source SVG icons
 const weatherIcons = {
-	clear: '/weather-icons/day.svg',
-	sunny: '/weather-icons/day.svg',
-	cloud: '/weather-icons/cloudy.svg',
-	rain: '/weather-icons/rainy-6.svg',
-	thunder: '/weather-icons/thunder.svg',
-	snow: '/weather-icons/snowy-6.svg',
-	fog: '/weather-icons/cloudy.svg'
+	clear: '../assets/weather-icons/day.svg',
+	sunny: '../assets/weather-icons/day.svg',
+	cloud: '../assets/weather-icons/cloudy.svg',
+	rain: '../assets/weather-icons/rainy-6.svg',
+	thunder: '../assets/weather-icons/thunder.svg',
+	snow: '../assets/weather-icons/snowy-6.svg',
+	fog: '../assets/weather-icons/cloudy.svg'
 };
 
 const getWeatherIcon = (desc) => {
