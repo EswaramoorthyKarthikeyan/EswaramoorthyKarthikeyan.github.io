@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 
 // Map weather description keywords to open source SVG icons
 const weatherIcons = {
-	clear: 'weather-icons/day.svg',
-	sunny: 'weather-icons/day.svg',
-	cloud: 'weather-icons/cloud.svg',
-	rain: 'weather-icons/rainy-6.svg',
-	thunder: 'weather-icons/thunder.svg',
-	snow: 'weather-icons/snowy-6.svg',
-	fog: 'weather-icons/fog.svg'
+	clear: '/weather-icons/day.svg',
+	sunny: '/weather-icons/day.svg',
+	cloud: '/weather-icons/cloudy.svg',
+	rain: '/weather-icons/rainy-6.svg',
+	thunder: '/weather-icons/thunder.svg',
+	snow: '/weather-icons/snowy-6.svg',
+	fog: '/weather-icons/cloudy.svg'
 };
 
 const getWeatherIcon = (desc) => {
@@ -28,7 +28,7 @@ export function useWeather(location = 'auto:ip') {
 	useEffect(() => {
 		async function fetchWeather() {
 			try {
-				const res = await fetch(`https://wttr.in/?format=j1`);
+				const res = await fetch(`https://wttr.in/chennai?format=j1`);
 				const data = await res.json();
 				const temp = data.current_condition?.[0]?.temp_C;
 				const desc = data.current_condition?.[0]?.weatherDesc?.[0]?.value;

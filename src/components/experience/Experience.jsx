@@ -12,7 +12,7 @@ export default function Experience({ experience }) {
 					<li className={styles.item} key={i}>
 						<div className={styles.role}>
 							<span className={styles.logo}>
-								<img src={exp.logo} alt={exp.org} fetchpriority="high" />
+								<img src={exp.logo} alt={exp.org} fetchPriority="high" />
 							</span>
 							<span className={styles.org}> {exp.org} </span>
 						</div>

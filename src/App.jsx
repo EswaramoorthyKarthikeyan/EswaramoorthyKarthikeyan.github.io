@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Header from './components/Header';
-import Personal from './components/Personal';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Footer from './components/Footer';
-import { experience } from './data/experience';
-import { socialLinks } from './data/socialLinks';
-import { getInitialTheme, setTheme as setThemeUtil } from './utils/theme';
+import { getInitialTheme, setTheme as setThemeUtil } from './utils/theme.js';
+
+import { Header, Footer, Personal, Skills, Experience } from './components/index.js';
+import { experience } from './data/experience.js';
+import { socialLinks } from './data/socialLinks.jsx';
 
 import './scss/style.scss';
+import './App.css';
 
 const profileImg =
 	'https://media.licdn.com/dms/image/v2/D5603AQH3zYbxK6DzBA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712083215761?e=1755734400&v=beta&t=ct6-1bRHdF-sh0mMdBK-JscwH8ER1HKxh1NctEV-9M0';
@@ -43,7 +41,7 @@ function useTheme() {
 	return [theme, setThemeState];
 }
 
-export default function App() {
+function App() {
 	const [theme, setTheme] = useTheme();
 	const time = useCurrentTime();
 	const themeIcon =
@@ -74,3 +72,5 @@ export default function App() {
 		</>
 	);
 }
+
+export default App;

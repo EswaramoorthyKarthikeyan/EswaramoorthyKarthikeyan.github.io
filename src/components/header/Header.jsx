@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import { useWeather } from '../utils/useWeather';
+import { useWeather } from '../../utils/useWeather';
 
 export default function Header({ profileImg, theme, setTheme, themeIcon, time }) {
 	const weather = useWeather();
