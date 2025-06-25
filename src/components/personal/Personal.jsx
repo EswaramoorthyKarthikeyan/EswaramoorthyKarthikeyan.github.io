@@ -1,9 +1,16 @@
 import React from 'react';
 import styles from './Personal.module.scss';
+import { useOnScreen } from '../../utils/useOnScreen';
 
 export default function Personal() {
+	const [ref, isVisible] = useOnScreen({ threshold: 0.7 });
+
 	return (
-		<section className={styles.personal} aria-labelledby="work-summary-title">
+		<section
+			ref={ref}
+			className={`${styles.personal} fade-in ${isVisible ? 'visible' : ''}`}
+			aria-labelledby="work-summary-title"
+		>
 			<h1 className={styles.title} id="work-summary-title">
 				Work Summary
 			</h1>

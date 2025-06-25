@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from './Experience.module.scss';
+import { useOnScreen } from '../../utils/useOnScreen';
 
 export default function Experience({ experience }) {
+  const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
+
 	return (
-		<section className={styles.experience} aria-labelledby="experience-title">
+		<section ref={ref} className={`${styles.experience} fade-in ${isVisible ? 'visible' : ''}`} aria-labelledby="experience-title">
 			<h2 className={styles.title} id="experience-title">
 				Experience
 			</h2>

@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from './Skills.module.scss';
+import { useOnScreen } from '../../utils/useOnScreen';
 
 export default function Skills() {
+  const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
+
 	return (
-		<section className={styles.skills} aria-labelledby="skills-title">
+		<section ref={ref} className={`${styles.skills} fade-in ${isVisible ? 'visible' : ''}`} aria-labelledby="skills-title">
 			<h2 className={styles.title} id="skills-title">
 				Skills
 			</h2>
