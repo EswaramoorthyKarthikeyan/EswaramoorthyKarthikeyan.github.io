@@ -1,14 +1,22 @@
 import { useEffect, useState } from 'react';
 
+// Import icons as modules
+import dayIcon from '../assets/weather-icons/day.svg';
+import cloudyIcon from '../assets/weather-icons/cloudy.svg';
+import rainyIcon from '../assets/weather-icons/rainy-6.svg';
+import thunderIcon from '../assets/weather-icons/thunder.svg';
+import snowyIcon from '../assets/weather-icons/snowy-6.svg';
+
+
 // Map weather description keywords to open source SVG icons
 const weatherIcons = {
-	clear: '../assets/weather-icons/day.svg',
-	sunny: '../assets/weather-icons/day.svg',
-	cloud: '../assets/weather-icons/cloudy.svg',
-	rain: '../assets/weather-icons/rainy-6.svg',
-	thunder: '../assets/weather-icons/thunder.svg',
-	snow: '../assets/weather-icons/snowy-6.svg',
-	fog: '../assets/weather-icons/cloudy.svg'
+	clear: dayIcon,
+	sunny: dayIcon,
+	cloud: cloudyIcon,
+	rain: rainyIcon,
+	thunder: thunderIcon,
+	snow: snowyIcon,
+	fog: cloudyIcon
 };
 
 const getWeatherIcon = (desc) => {
