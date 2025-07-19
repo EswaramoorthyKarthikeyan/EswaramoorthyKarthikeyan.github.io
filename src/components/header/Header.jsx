@@ -23,15 +23,7 @@ export default function Header({ profileImg, theme, setTheme, themeIcon, time })
 			</div>
 			<div className={styles.actionWrapper}>
 				<div className={styles.actions} role="toolbar" aria-label="Header actions">
-					<button
-						type="button"
-						aria-label="Toggle theme"
-						className={styles.themeSwitch}
-						aria-pressed={theme === 'dark'}
-						onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-					>
-						{themeIcon}
-					</button>
+					
 					{weather.icon && (
 						<span
 							className={styles.weather}
@@ -57,6 +49,15 @@ export default function Header({ profileImg, theme, setTheme, themeIcon, time })
 				<span className={styles.time} aria-live="polite" aria-label="Current time">
 					{time}
 				</span>
+				<button
+						type="button"
+						aria-label="Toggle theme"
+						className={styles.themeSwitch}
+						aria-pressed={theme === 'dark'}
+						onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+					>
+						{themeIcon}
+					</button>
 			</div>
 		</header>
 	);
